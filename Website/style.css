@@ -1,26 +1,127 @@
-#Navbar{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    overflow: visible;
+:root {
+    --navBarClr: rgb(95, 95, 224);
+    --backgroundClr: white;
+    --textColor: black;
+    --hoverColor: #e30046;
+    --footerColor: #e30046;
 }
-#Navbar a{
-    justify-content: flex-start;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+}
+
+/* Navbar container */
+#Head {
+    background-color: var(--backgroundClr);
+    box-shadow: 0 4px 4px -2px #e30046;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+#Head img {
+    position: absolute;
+    top :20px;
+    left: 20px; 
+    width: 250px;
+    height: auto;
+}
+
+/* Navigatie lijst */
+#List {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.6rem;
+    padding: 3rem;
+    
+    
+}
+
+#List li a {
     text-decoration: none;
     color: var(--textColor);
-    font-size:2rem;
-    padding: 0.3rem;
-    margin : 0 3rem;
-    border: 0.01px  solid transparent;
-    box-sizing: border-box;
-   
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    border-radius: 5px;
 }
-#Navbar img{
-    width: 300px;
-    height: auto;
-    padding: 1rem;
+
+#List a:hover, #List a.active {
+    color: var(--hoverColor);
+    background: rgba(227, 0, 70, 0.1);
+}
+
+/* Hamburger menu icoon */
+.menu-toggle {
+    display: none;
+    position: absolute; /* Zorg ervoor dat de hamburgerknop altijd op dezelfde plek blijft */
+    right: 20px; /* Plaats het rechtsboven in de header */
+    font-size: 32px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px 15px; /* Vergroot de hitbox van de hamburgerknop */
+    color: var(--textColor);
+    z-index: 1001; /* Zorg ervoor dat de knop altijd boven de navigatie komt */
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1150px) {
+    #Head
+    {
+        justify-content: space-between;
+    }
+    #Head img {
+        padding : 1rem;
+        position : static;
+        width: 250px;
+        height: auto;
+    }
+    #Nav {
+        position: fixed;
+        top: 80px;
+        width: 100%;
+    }
+
+    #List {
+        width: 100%;
+        display: none; /* Begin met de lijst verborgen */
+        flex-direction: column; /* Zet de lijst onder elkaar */
+        align-items: center;
+        margin-top: 35px; /* Voeg ruimte toe boven de lijst */
+        font-size: 1.4rem;
+        background-color: rgba(128, 128, 128, 0.459);
+        color: white;
+        
+    }
+    #List.active {
+        display: flex;
+    }
+
+    #List li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    .menu-toggle:hover{
+        box-shadow: 0 4px 4px -2px black;
+    }
 }
