@@ -66,6 +66,7 @@ header img {
 
 /* Hamburger menu icoon */
 #menu-toggle {
+    text-decoration: none;
     display:none;
     position: relative; /* Zorg ervoor dat de hamburgerknop altijd op dezelfde plek blijft */
     right: 20px; /* Plaats het rechtsboven in de header */
