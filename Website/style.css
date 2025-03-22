@@ -18,10 +18,10 @@ main{
 }
 
 /* Navbar container */
-#Head {
+header {
+    padding: 5px;
     background-color: var(--backgroundClr);
     box-shadow: 0 4px 4px -2px #e30046;
-    display: flex;
     align-items: center;
     justify-content:center;
     width: 100%;
@@ -31,7 +31,7 @@ main{
 }
 
 /* Logo */
-#Head img {
+header img {
     position: absolute;
     top :20px;
     left: 20px; 
@@ -65,9 +65,9 @@ main{
 }
 
 /* Hamburger menu icoon */
-.menu-toggle {
-    display: none;
-    position: absolute; /* Zorg ervoor dat de hamburgerknop altijd op dezelfde plek blijft */
+#menu-toggle {
+    display:none;
+    position: relative; /* Zorg ervoor dat de hamburgerknop altijd op dezelfde plek blijft */
     right: 20px; /* Plaats het rechtsboven in de header */
     font-size: 32px;
     cursor: pointer;
@@ -81,11 +81,11 @@ main{
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1150px) {
-    #Head
+    header
     {
         justify-content: space-between;
     }
-    #Head img {
+    header img {
         padding : 1rem;
         position : static;
         width: 250px;
@@ -118,7 +118,7 @@ main{
         text-align: center;
     }
 
-    .menu-toggle {
+    #menu-toggle {
         display: block;
     }
     .menu-toggle:hover{
