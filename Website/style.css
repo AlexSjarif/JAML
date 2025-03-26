@@ -123,3 +123,55 @@ header img {
         box-shadow: 0 4px 4px -2px black;
     }
 }
+#motivational-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 800px;
+    background-color: rgba(227, 0, 70, 0.1);
+    border-left: 4px solid var(--hoverColor);
+    color: var(--textColor);
+}
+
+@media (max-width: 768px) {
+    #motivational-quote {
+        font-size: 1.2rem;
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+/* Welcome message styling */
+#welcome-message {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  #welcome-message h1 {
+    color: var(--hoverColor);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  #welcome-message ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+  
+  #welcome-message li {
+    margin-bottom: 0.8rem;
+  }
+  
+  #dynamic-encouragement {
+    font-weight: bold;
+    color: var(--hoverColor);
+  }
+  
+  @media (max-width: 768px) {
+    #welcome-message {
+      padding: 1rem;
+    }
+  }
