@@ -34,6 +34,29 @@ function displayRandomQuote() {
     if (quoteElement) {
         quoteElement.textContent = quotes[randomIndex];
     }
+    // Add this to your existing displayRandomQuote() function
+const encouragements = [
+    "Vandaag is jouw dag!",
+    "Jij kunt dit!",
+    "Elke stap telt!",
+    "Blijf gaan!",
+    "Succes begint hier!"
+  ];
+  
+  function displayEncouragement() {
+    const randomIndex = Math.floor(Math.random() * encouragements.length);
+    const encouragementElement = document.getElementById('dynamic-encouragement');
+    if (encouragementElement) {
+      encouragementElement.textContent = encouragements[randomIndex];
+    }
+  }
+  
+  // Update the DOMContentLoaded event listener:
+  document.addEventListener('DOMContentLoaded', function() {
+    actiefTab();
+    displayRandomQuote();
+    displayEncouragement(); // Add this line
+  });
 }
 
 

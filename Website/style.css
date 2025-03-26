@@ -142,3 +142,36 @@ header img {
         padding: 1rem;
     }
 }
+/* Welcome message styling */
+#welcome-message {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  #welcome-message h1 {
+    color: var(--hoverColor);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  #welcome-message ul {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+  }
+  
+  #welcome-message li {
+    margin-bottom: 0.8rem;
+  }
+  
+  #dynamic-encouragement {
+    font-weight: bold;
+    color: var(--hoverColor);
+  }
+  
+  @media (max-width: 768px) {
+    #welcome-message {
+      padding: 1rem;
+    }
+  }
