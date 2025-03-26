@@ -34,7 +34,7 @@ function displayRandomQuote() {
     if (quoteElement) {
         quoteElement.textContent = quotes[randomIndex];
     }
-    // Add this to your existing displayRandomQuote() function
+
 const encouragements = [
     "Vandaag is jouw dag!",
     "Jij kunt dit!",
@@ -51,17 +51,17 @@ const encouragements = [
     }
   }
   
-  // Update the DOMContentLoaded event listener:
+
   document.addEventListener('DOMContentLoaded', function() {
     actiefTab();
     displayRandomQuote();
-    displayEncouragement(); // Add this line
+    displayEncouragement(); 
   });
 }
 
 
 document.addEventListener('DOMContentLoaded', function() {
     actiefTab();
-    toggleMenu(); // Keep your existing menu functionality
+    toggleMenu(); 
     displayRandomQuote(); 
 });
