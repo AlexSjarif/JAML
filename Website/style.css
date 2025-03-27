@@ -52,7 +52,7 @@ footer{
 
 
 /* Logo */
-header img {
+#logo {
     position: absolute;
     top :20px;
     left: 20px; 
@@ -99,6 +99,28 @@ header img {
     color: var(--textColor);
     z-index: 1001; /* Zorg ervoor dat de knop altijd boven de navigatie komt */
 }
+
+/*------Night Mode-------*/
+
+#NightmodeButton{
+    position: inherit;
+    margin-bottom: 10px;
+    height: 45px;
+    width: 45px;
+    /* background-color:rgb(16, 16, 92); */
+    border-radius: 25px;
+    /* border-color: aqua; */
+}
+
+#NightmodeImage{
+    box-sizing:content-box;
+    align-items: center;
+    position: initial;
+    top:1em;
+    height: 25px;
+    width: 25px; 
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1150px) {
     header img {
