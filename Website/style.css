@@ -175,3 +175,65 @@ header img {
       padding: 1rem;
     }
   }
+  /* Study Tips Styling */
+.study-tips {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.study-tips h1 {
+    color: var(--hoverColor);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.tip-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-left: 4px solid var(--hoverColor);
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card h2 {
+    color: var(--navBarClr);
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.tip-card p {
+    color: var(--textColor);
+    line-height: 1.6;
+}
+
+.tip-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+    .study-tips {
+        padding: 0 1rem;
+    }
+    
+    .tip-card {
+        padding: 1.2rem;
+    }
+    
+    .tip-icon {
+        position: static;
+        display: inline-block;
+        margin-left: 1rem;
+    }
+}

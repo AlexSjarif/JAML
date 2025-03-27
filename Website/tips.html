@@ -1,28 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <title>Document</title>
-</head>
-<body>
+    <title>Studie Tips</title>
+  </head>
+  <body>
     <header>
-        <div id="menu-logo">
-          <img src="img/Logo.png" alt="" />
-          <div id="menu" onclick="toggleMenu()">
-            <a href="javascript:void(0);" id="menu-toggle">☰</a>
-          </div>
+      <div id="menu-logo">
+        <img src="img/Logo.png" alt="" />
+        <div id="menu" onclick="toggleMenu()">
+          <a href="javascript:void(0);" id="menu-toggle">☰</a>
         </div>
-        
-          <ul id="List">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tips.html">Studie Tips</a></li>
-            <li><a href="ontspanning.html">Ontspanning</a></li>
-          </ul>
-        
-      </header>
-    
-</body>
+      </div>
+
+      <ul id="List">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tips.html">Studie Tips</a></li>
+        <li><a href="ontspanning.html">Ontspanning</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="study-tips">
+        <h1>Effectieve Studie Tips</h1>
+
+        <div class="tip-card">
+          <h2>1. De Pomodoro Techniek</h2>
+          <p>
+            Werk in blokken van 25 minuten met 5 minuten pauze. Na 4 blokken
+            neem je een langere pauze van 15-30 minuten. Dit verbetert je focus
+            en voorkomt uitstelgedrag.
+          </p>
+
+          <div class="tip-icon">⏱️</div>
+        </div>
+
+        <div class="tip-card">
+          <h2>2. Actief Samenvatten</h2>
+          <p>
+            Maak korte samenvattingen in je eigen woorden. Gebruik mindmaps of
+            spiekbriefjes om verbanden te zien. Dit helpt bij het onthouden van
+            de stof.
+          </p>
+
+          <div class="tip-icon">📝</div>
+        </div>
+
+        <div class="tip-card">
+          <h2>3. Spaced Repetition</h2>
+          <p>
+            Herhaal de stof met tussenpozen (dag 1, dag 3, dag 7 etc.). Gebruik
+            apps zoals Anki of Quizlet voor flashcards. Je brein onthoudt beter
+            door herhaling.
+          </p>
+
+          <div class="tip-icon">🔄</div>
+        </div>
+
+        <div class="tip-card">
+          <h2>4. Uitleg aan een Denkbeeldig Publiek</h2>
+          <p>
+            Leg de stof hardop uit alsof je het aan iemand anders uitlegt. Dit
+            maakt kennisgaten duidelijk en versterkt je begrip.
+          </p>
+
+          <div class="tip-icon">🗣️</div>
+        </div>
+
+        <div class="tip-card">
+          <h2>5. Gezonde Studie Routine</h2>
+          <p>
+            Zorg voor voldoende slaap (7-9 uur), beweeg regelmatig en eet
+            gezond. Een uitgerust brein presteert veel beter!
+          </p>
+
+          <div class="tip-icon">💤</div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
