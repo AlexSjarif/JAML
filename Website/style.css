@@ -11,12 +11,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+<<<<<<< Updated upstream
 main{
     position: relative;
     z-index: 1;
     padding: 1rem;
 }
 
+=======
+>>>>>>> Stashed changes
 /* Navbar container */
 header {
     padding: 5px;
@@ -29,6 +32,33 @@ header {
     left: 0;
     z-index: 1000;
 }
+<<<<<<< Updated upstream
+=======
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-size:1.3rem;
+    background-color: var(--backgroundClr);
+}
+
+main{
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+}
+footer{ 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    background-color: #e30048;
+    box-shadow: 0 4px 4px -2px #645f60;
+}
+
+>>>>>>> Stashed changes
 
 /* Logo */
 header img {

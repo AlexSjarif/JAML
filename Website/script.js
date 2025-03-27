@@ -58,7 +58,11 @@ function displayEncouragement() {
 // Initialize all functionality when page loads
 document.addEventListener('DOMContentLoaded', function() {
     actiefTab();
+<<<<<<< Updated upstream
     toggleMenu();
     displayRandomQuote();
     displayEncouragement();
+=======
+    displayRandomQuote(); 
+>>>>>>> Stashed changes
 });
