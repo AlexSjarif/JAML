@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    <div id="menu-logo">
+      <div id="menu-logo">
         <img src="img/Logo.png" alt="" />
         <div id="menu" onclick="toggleMenu()">
           <a href="javascript:void(0);" id="menu-toggle">☰</a>
         </div>
       </div>
-      
-        <ul id="List">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="tips.html">Studie Tips</a></li>
-          <li><a href="ontspanning.html">Ontspanning</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>
+
+      <ul id="List">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tips.html">Studie Tips</a></li>
+        <li><a href="ontspanning.html">Ontspanning</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
     </header>
 
     <main>
-        <section class="container">
-            <h2>Neem contact met ons op</h2>
-            <article>
-                <form>
-                    <label for="voornaam">Voornaam</label>
-                    <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam" required>
-                
-                    <label for="achternaam">Achternaam</label>
-                    <input type="text" id="achternaam" name="achternaam" placeholder="Achternaam" required>
-                
-                    <label for="email">E-mailadres</label>
-                    <input type="email" id="email" name="email" placeholder="E-mailadres" required>
-                
-                    <label for="telefoon">Telefoonnummer</label>
-                    <input type="tel" id="telefoon" name="telefoon" placeholder="Telefoonnummer">
-                
-                    <label for="bericht">Uw vraag of bericht</label>
-                    <textarea id="bericht" name="bericht" placeholder="Schrijf hier uw vraag of bericht." required></textarea>
-                
-                    <input type="submit" value="Versturen">
-                </form>
-            </article>
-        </section>
+      <section class="container">
+        <h2>Neem contact met ons op</h2>
+        <article>
+          <form>
+            <label for="voornaam"
+              >Voornaam <span style="color: red">*</span></label
+            >
+            <input
+              type="text"
+              id="voornaam"
+              name="voornaam"
+              placeholder="Voornaam"
+              required
+            />
+
+            <label for="achternaam"
+              >Achternaam <span style="color: red">*</span></label
+            >
+            <input
+              type="text"
+              id="achternaam"
+              name="achternaam"
+              placeholder="Achternaam"
+              required
+            />
+
+            <label for="email"
+              >E-mailadres <span style="color: red">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-mailadres"
+              required
+            />
+
+            <label for="telefoon">Telefoonnummer</label>
+            <input
+              type="tel"
+              id="telefoon"
+              name="telefoon"
+              placeholder="Telefoonnummer"
+            />
+
+            <label for="bericht"
+              >Uw vraag of bericht <span style="color: red">*</span></label
+            >
+            <textarea
+              id="bericht"
+              name="bericht"
+              placeholder="Schrijf hier uw vraag of bericht."
+              required
+            ></textarea>
+
+            <input type="submit" value="Versturen" />
+            <p><span style="color: red">*</span> dit zijn verplichte velden.</p>
+          </form>
+        </article>
+      </section>
     </main>
-</body>
+  </body>
 </html>
