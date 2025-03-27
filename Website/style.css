@@ -11,15 +11,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-<<<<<<< Updated upstream
-main{
-    position: relative;
-    z-index: 1;
-    padding: 1rem;
+.content{
+    flex:1
 }
-
-=======
->>>>>>> Stashed changes
 /* Navbar container */
 header {
     padding: 5px;
@@ -32,8 +26,6 @@ header {
     left: 0;
     z-index: 1000;
 }
-<<<<<<< Updated upstream
-=======
 html,body{
     height: 100%;
     padding: 0;
@@ -58,7 +50,6 @@ footer{
     box-shadow: 0 4px 4px -2px #645f60;
 }
 
->>>>>>> Stashed changes
 
 /* Logo */
 header img {
