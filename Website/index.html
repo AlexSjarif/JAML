@@ -11,20 +11,23 @@
   <body>
     <header>
       <div id="menu-logo">
-        <img src="img/Logo.png" alt="" id = "logo"/>
+        <img src="img/Logo.png" alt="" id="logo" />
+        <button id="NightmodeButtonOutsideList" onclick="toggleNightMode()">
+          <img src="img/crescent-moon.ico" ID="NightmodeImage"></a>
+        </button>
         <div id="menu" onclick="toggleMenu()">
           <a href="javascript:void(0);" id="menu-toggle">☰</a>
         </div>
       </div>
-
       <ul id="List">
         <li><a href="index.html">Home</a></li>
         <li><a href="tips.html">Studie Tips</a></li>
         <li><a href="ontspanning.html">Ontspanning</a></li>
         <li><a href="Contact.html">Contact</a></li>
-        <li><button id="NightmodeButton">
-          <img src="img/crescent-moon.ico" ID="NightmodeImage"></a>
-        </button></li>
+        <li>
+          <button id="NightmodeButtonInsideList" onclick="toggleNightMode()">
+            <img src="img/crescent-moon.ico" ID="NightmodeImage"></a>
+        </li>
       </ul>
     </header>
     <main>
@@ -33,28 +36,18 @@
       <section id="welcome-message">
         <h1>Welkom bij StudentBuddy!</h1>
         <p>
-          Deze website is jouw persoonlijke studiecoach, gemaakt om je te helpen
-          slimmer te leren, effectiever te plannen en tóch tijd te houden voor
-          ontspanning. Of je nu vastloopt op een moeilijk onderwerp of even een
-          pauze nodig hebt, wij bieden:
+          Deze website is jouw persoonlijke studiecoach, gemaakt om je te helpen slimmer te leren,
+          effectiever te plannen en tóch tijd te houden voor ontspanning. Of je nu vastloopt op een
+          moeilijk onderwerp of even een pauze nodig hebt, wij bieden:
         </p>
         <ul>
-          <li>
-            🧠 <strong>Studietips</strong> - Bewezen methoden om sneller en
-            beter te leren
-          </li>
-          <li>
-            ⏳ <strong>Planningshulpmiddelen</strong> - Slimme tools om je tijd
-            te beheren
-          </li>
-          <li>
-            🎮 <strong>Ontspanningsideeën</strong> - Korte breaks om je brein op
-            te laden
-          </li>
+          <li>🧠 <strong>Studietips</strong> - Bewezen methoden om sneller en beter te leren</li>
+          <li>⏳ <strong>Planningshulpmiddelen</strong> - Slimme tools om je tijd te beheren</li>
+          <li>🎮 <strong>Ontspanningsideeën</strong> - Korte breaks om je brein op te laden</li>
         </ul>
         <p>
-          Begin met verkennen via het menu bovenin, en vergeet niet: elke grote
-          prestatie begint met een kleine stap! 
+          Begin met verkennen via het menu bovenin, en vergeet niet: elke grote prestatie begint met
+          een kleine stap!
           <span id="dynamic-encouragement">Vandaag is jouw dag!</span>
         </p>
       </section>
