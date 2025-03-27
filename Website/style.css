@@ -62,9 +62,9 @@ header img  {
 
 /* Navigatie lijst */
 #List {
-    flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style: none;
     font-size: 1.6rem;
     padding: 2rem;
@@ -125,16 +125,17 @@ header img  {
         position: absolute;
         top :20px;
         left: 20px; 
-        width: 350px;
+        width: 250px;
         height: auto;
     }
     #List {
-        font-size: 1.4rem; 
+        font-size: 1.2rem; 
+        padding: 1rem;
     }
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 1550px) {
+@media (max-width: 1250px) {
     header img {
         padding : 1rem;
         position : static;
