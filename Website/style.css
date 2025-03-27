@@ -120,13 +120,25 @@ header img  {
     height: 25px;
     width: 25px; 
 }
+@media (max-width: 1700px) {
+    header img  {
+        position: absolute;
+        top :20px;
+        left: 20px; 
+        width: 350px;
+        height: auto;
+    }
+    #List {
+        font-size: 1.4rem; 
+    }
+}
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 1150px) {
+@media (max-width: 1550px) {
     header img {
         padding : 1rem;
         position : static;
-        width: 400px;
+        width: 300px;
         height: auto;
     }
     #menu-logo
