@@ -58,7 +58,6 @@ function displayEncouragement() {
 // Initialize all functionality when page loads
 document.addEventListener('DOMContentLoaded', function() {
     actiefTab();
-    toggleMenu();
     displayRandomQuote();
     displayEncouragement();
 });
