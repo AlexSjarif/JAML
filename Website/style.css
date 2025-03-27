@@ -11,12 +11,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-main{
-    position: relative;
-    z-index: 1;
-    padding: 1rem;
+.content{
+    flex:1
 }
-
 /* Navbar container */
 header {
     padding: 5px;
@@ -29,13 +26,37 @@ header {
     left: 0;
     z-index: 1000;
 }
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-size:1.3rem;
+    background-color: var(--backgroundClr);
+}
+
+main{
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+}
+footer{ 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    background-color: #e30048;
+    box-shadow: 0 4px 4px -2px #645f60;
+}
+
 
 /* Logo */
-header img {
+#logo {
     position: absolute;
     top :20px;
     left: 20px; 
-    width: 250px;
+    width: 400px;
     height: auto;
 }
 
@@ -46,7 +67,7 @@ header img {
     justify-content: center;
     list-style: none;
     font-size: 1.6rem;
-    padding: 3rem;
+    padding: 2rem;
     
     
 }
@@ -78,12 +99,34 @@ header img {
     color: var(--textColor);
     z-index: 1001; /* Zorg ervoor dat de knop altijd boven de navigatie komt */
 }
+
+/*------Night Mode-------*/
+
+#NightmodeButton{
+    position: inherit;
+    margin-bottom: 10px;
+    height: 45px;
+    width: 45px;
+    /* background-color:rgb(16, 16, 92); */
+    border-radius: 25px;
+    /* border-color: aqua; */
+}
+
+#NightmodeImage{
+    box-sizing:content-box;
+    align-items: center;
+    position: initial;
+    top:1em;
+    height: 25px;
+    width: 25px; 
+}
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1150px) {
     header img {
         padding : 1rem;
         position : static;
-        width: 250px;
+        width: 400px;
         height: auto;
     }
     #menu-logo
