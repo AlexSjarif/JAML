@@ -1,6 +1,6 @@
 // Highlight active tab in navigation
 function actiefTab() {
-    const links = document.querySelectorAll('#List a');
+    const links = document.querySelectorAll('#List li a');
     links.forEach(link => {
         if (link.href === window.location.href) {
             link.classList.add('active');
@@ -60,26 +60,13 @@ function displayEncouragement() {
 let nightMode = false; // Default to light mode
 function toggleNightMode()
 { 
-    const body = document.querySelector("Body");
+    const body = document.querySelector("Main");
     const button1 = document.getElementById("NightmodeButtonOutsideList");
     const button2 = document.getElementById("NightmodeButtonInsideList");
     const buttons = [button1, button2];
     if (body.style.color == 'white'){nightMode = true}
-    if (nightMode == false)
-    {
-        nightMode = true;
-        localStorage.setItem('NightmodeStatus', true);
-        var image = document.getElementById('NightmodeImage')
-        image.src = 'img/sun.ico'
-        document.querySelector("header").style.backgroundColor = 'rgb(65, 45, 45)'
-        body.style.background = 'black'
-        body.style.color = 'white'
-        // document.getElementById('motivational-quote').style.color = 'white'
-        document.querySelector('#List li').style.color = 'white'
-        // buttons.style.backgroundColor = 'rgb(38, 195, 219)'
-        // buttons.style.borderColor = 'rgb(16,16,92)'
-    }
-    else if (nightMode == true) 
+
+    if (nightMode == true)
     {
         nightMode = false;
         localStorage.setItem('NightmodeStatus', false);
@@ -95,17 +82,32 @@ function toggleNightMode()
         // buttons.style.backgroundColor= 'rgb(16,16,92)'
         // buttons.style.borderColor = 'rgb(38, 195, 219)'
     }
-} 
+    else if (nightMode == false) 
+    {
+        nightMode = true;
+        localStorage.setItem('NightmodeStatus', true);
+        var image = document.getElementById('NightmodeImage')
+        vars= document.querySelectorAll ('#welcome-message')
 
-window.addEventListener('load', () => {
-    if (localStorage.getItem('NightmodeStatus') === 'true'){
-        toggleNightMode();
+        image.src = 'img/sun.ico'
+        document.querySelector("header").style.backgroundColor = 'rgb(65, 45, 45)'
+        body.style.background = 'black'
+        body.style.color = 'white'
+        // document.getElementById('motivational-quote').style.color = 'white'
+        document.querySelector('#List li').style.color = 'white'
+        // buttons.style.backgroundColor = 'rgb(38, 195, 219)'
+        // buttons.style.borderColor = 'rgb(16,16,92)'
     }
-})
+} 
 
 // Initialize all functionality when page loads
 document.addEventListener('DOMContentLoaded', function() {
     actiefTab();
     displayRandomQuote();
     displayEncouragement();
+    if (localStorage.getItem('NightmodeStatus') === 'true'){
+        toggleNightMode();
+        
+        console.log(window.location.href.toString())
+    }
 });

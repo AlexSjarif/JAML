@@ -16,11 +16,19 @@
 }
 
 /* Navbar container */
-
-header {
-    padding: 10px 5px;
+header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
     background-color: var(--backgroundClr);
     box-shadow: 0 4px 4px -2px #e30046;
+}
+
+#menu-logo{
+    display: grid;
+    grid-template-columns: repeat(30, 1fr); 
+    grid-column: 1/15;
+    padding: 20px 5px;
     align-items: center;
     justify-content:center;
     width: 100%;
@@ -28,11 +36,12 @@ header {
     left: 0;
     z-index: 1000;
 }
+
 html,body{
     height: 100%;
     padding: 0;
     margin: 0;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     font-size:1.3rem;
     background-color: var(--backgroundClr);
@@ -54,17 +63,20 @@ footer{
 
 
 /* Logo */
-header img  {
-    position: absolute;
-    top :20px;
+#logo {
+    display: inline-block;
+    grid-column: 1/span 8;
+    /* top :20px;
     left: 20px; 
     width: 400px;
-    height: auto;
+    height: auto; */
 }
 
 /* Navigatie lijst */
 #List {
-    display: flex;
+    grid-column: 16/30;
+    display: inline-flex;
+    grid-template-columns: repeat(30, 1fr);
     justify-content: end;
     align-items: center;
     list-style: none;
@@ -88,15 +100,18 @@ header img  {
 }
 
 /* Hamburger menu icoon */
+#menu{
+    grid-column: 28/30;
+}
 #menu-toggle {
     text-decoration: none;
     display:none;
-    position: relative; /* Zorg ervoor dat de hamburgerknop altijd op dezelfde plek blijft */
+    /* position: relative; Zorg ervoor dat de hamburgerknop altijd op dezelfde plek blijft
     right: 20px; /* Plaats het rechtsboven in de header */
     font-size: 32px;
-    cursor: pointer;
+    /* cursor: pointer;
     background: none;
-    border: none;
+    border: none; */ 
     padding: 10px 15px; /* Vergroot de hitbox van de hamburgerknop */
     color: var(--textColor);
     z-index: 1001; /* Zorg ervoor dat de knop altijd boven de navigatie komt */
@@ -115,7 +130,8 @@ header img  {
     /* border-color: aqua; */
 }
 #NightmodeButtonOutsideList{
-    margin: 0 1rem 0 25rem;
+    grid-column: 10/span 15;
+    margin: 0 1rem;
     padding: 8px;
     display:inline-block;
     position: inherit;
@@ -128,17 +144,23 @@ header img  {
 
 #NightmodeImage{
     box-sizing:content-box;
-    position: initial;
+    /* position: initial; */
     top:1em;
     height: 30px;
     width: 30px; 
 }
 @media (max-width: 1700px) {
+    /* header{
+        display: grid;
+        grid-template-columns: repeat(30, 1fr); */
+    }
     header img  {
-        position: absolute;
-        top :20px;
-        left: 20px; 
-        width: 250px;
+        display: inline-block;
+        /* position: absolute; */
+        grid-column: 1/span 8;
+        /* top :20px;
+        left: 20px;  */
+        max-width: 300px;
         height: auto;
     }
     #List {
@@ -147,31 +169,36 @@ header img  {
     }
     #NightmodeButtonInsideList{
         display: inline-block;
+        
     }
     #NightmodeButtonOutsideList{
+        grid-column: 10/span 15;
         display: none;
     }
-}
+
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1250px) {
+
+    
     header img {
         padding : 1rem;
-        position : static;
+        grid-column: 1/span 8;
+        display: inline-block;
+        /* position : static; */
         width: 300px;
         height: auto;
     }
     #menu-logo
     {
-        display: flex;
+        grid-column: 1/30;
+        width:100%;
+        display: inline-grid;
+        grid-template-columns: repeat(30, 1fr);
         justify-content: space-between;
         align-items: center;
     }
-    #Nav {
-        position: fixed;
-        top: 80px;
-        width: 100%;
-    }
+   
 
     #List {
         width: 100%;
@@ -182,7 +209,10 @@ header img  {
         color: white;
     }
     #List.active {
-        display: flex;
+        grid-row: 2/2;
+        grid-column: 12/30;
+        display: inline-grid;
+        max-width: 100%;
     }
 
     #List li {
@@ -191,18 +221,23 @@ header img  {
         text-align: center;
     }
 
+    #menu{
+        grid-column: 29/30;
+
+    }
     #menu-toggle {
-        /* padding: 10px; */
+        padding: 10px;
         margin-right:10px;
         display: block;
     }
-    .menu-toggle:hover{
+    #menu-toggle:hover{
         box-shadow: 0 4px 4px -2px black;
     }
     #NightmodeButtonInsideList{
         display: none;
     }
     #NightmodeButtonOutsideList{
+        grid-column: 26/27;
         display:inline-block;
     }
     #NightmodeImage{
@@ -223,8 +258,15 @@ header img  {
     color: var(--textColor);
 }
 
+
 @media (max-width: 768px) {
-    #motivational-quote {
+
+    #List.active {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+#motivational-quote {
         font-size: 1.2rem;
         margin: 1rem;
         padding: 1rem;
@@ -416,5 +458,25 @@ header img  {
     
     .container label {
         margin-bottom: 0.7rem; 
+    }
+}
+
+@media(max-width: 480px) {
+
+    header img{
+        max-width: 200px;
+    }
+    #NightmodeButtonOutsideList{
+        padding:0;
+        height: 35px;   
+        width: 35px;
+    }
+    #NightmodeImage{
+        height: 25px;
+        width: 25px; 
+    }
+    #menu-toggle {
+        font-size: 28px;
+        padding: 8px;
     }
 }
