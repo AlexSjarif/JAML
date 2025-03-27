@@ -9,14 +9,12 @@
 * {
     padding: 0;
     margin: 0;
+    
     box-sizing: border-box;
 }
-main{
-    position: relative;
-    z-index: 1;
-    padding: 1rem;
+.content{
+    flex:1
 }
-
 /* Navbar container */
 header {
     padding: 5px;
@@ -29,6 +27,30 @@ header {
     left: 0;
     z-index: 1000;
 }
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-size:1.3rem;
+    background-color: var(--backgroundClr);
+}
+
+main{
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+}
+footer{ 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    background-color: #e30048;
+    
+}
+
 
 /* Logo */
 header img {
@@ -46,7 +68,7 @@ header img {
     justify-content: center;
     list-style: none;
     font-size: 1.6rem;
-    padding: 3rem;
+    padding: 2rem;
     
     
 }

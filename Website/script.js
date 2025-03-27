@@ -53,7 +53,6 @@ const encouragements = [
   
 
   document.addEventListener('DOMContentLoaded', function() {
-    actiefTab();
     displayRandomQuote();
     displayEncouragement(); 
   });
