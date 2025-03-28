@@ -149,7 +149,7 @@ footer{
     height: 30px;
     width: 30px; 
 }
-@media (max-width: 1700px) {
+@media (max-width: 4000px) {
     /* header{
         display: grid;
         grid-template-columns: repeat(30, 1fr); */
