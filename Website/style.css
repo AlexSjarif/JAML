@@ -142,7 +142,7 @@ footer{
     /* border-color: aqua; */
 }
 
-#NightmodeImage{
+.NightmodeImage{
     box-sizing:content-box;
     /* position: initial; */
     top:1em;
@@ -153,7 +153,7 @@ footer{
     /* header{
         display: grid;
         grid-template-columns: repeat(30, 1fr); */
-    }
+    
     header img  {
         display: inline-block;
         /* position: absolute; */
@@ -175,7 +175,7 @@ footer{
         grid-column: 10/span 15;
         display: none;
     }
-
+}
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1250px) {
@@ -240,7 +240,7 @@ footer{
         grid-column: 26/27;
         display:inline-block;
     }
-    #NightmodeImage{
+    .NightmodeImage{
         padding: 0;
         height: 30px;
         width: 30px;
@@ -471,7 +471,7 @@ footer{
         height: 35px;   
         width: 35px;
     }
-    #NightmodeImage{
+    .NightmodeImage{
         height: 25px;
         width: 25px; 
     }

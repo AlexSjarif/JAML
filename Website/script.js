@@ -2,6 +2,7 @@
 function actiefTab() {
     const links = document.querySelectorAll('#List li a');
     links.forEach(link => {
+        // if a nav link is the same as the current URL, add the 'active' class to it.
         if (link.href === window.location.href) {
             link.classList.add('active');
         }
@@ -60,7 +61,7 @@ function displayEncouragement() {
 let nightMode = false; // Default to light mode
 function toggleNightMode()
 { 
-    const body = document.querySelector("Main");
+    const body = document.querySelector("Body");
     const button1 = document.getElementById("NightmodeButtonOutsideList");
     const button2 = document.getElementById("NightmodeButtonInsideList");
     const buttons = [button1, button2];
@@ -70,7 +71,7 @@ function toggleNightMode()
     {
         nightMode = false;
         localStorage.setItem('NightmodeStatus', false);
-        var image = document.getElementById('NightmodeImage')
+        var image = document.querySelector('.NightmodeImage')
         image.src = 'img/crescent-moon.ico'
         document.querySelector("header").style.backgroundColor = 'white'
         body.style.background = 'white';
@@ -86,7 +87,7 @@ function toggleNightMode()
     {
         nightMode = true;
         localStorage.setItem('NightmodeStatus', true);
-        var image = document.getElementById('NightmodeImage')
+        var image = document.querySelector('.NightmodeImage')
         vars= document.querySelectorAll ('#welcome-message')
 
         image.src = 'img/sun.ico'
@@ -105,9 +106,5 @@ document.addEventListener('DOMContentLoaded', function() {
     actiefTab();
     displayRandomQuote();
     displayEncouragement();
-    if (localStorage.getItem('NightmodeStatus') === 'true'){
-        toggleNightMode();
-        
-        console.log(window.location.href.toString())
-    }
+    if (localStorage.getItem('NightmodeStatus') === 'true') toggleNightMode();
 });

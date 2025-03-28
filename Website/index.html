@@ -10,15 +10,21 @@
 
   <body>
     <header>
+
       <div id="menu-logo">
+        <!--Child 1-->
         <div id="logo"><img src="img/Logo.png" alt="" /></div>
+        <!--Child 2-->
         <button id="NightmodeButtonOutsideList" onclick="toggleNightMode()">
-          <img src="img/crescent-moon.ico" ID="NightmodeImage"></a>
+          <img src="img/crescent-moon.ico" class="NightmodeImage"></a>
         </button>
+        <!--Child 3-->
         <div id="menu" onclick="toggleMenu()">
           <a href="javascript:void(0);" id="menu-toggle">☰</a>
         </div>
+
       </div>
+
       <div id="List">
         <li><a href="index.html">Home</a></li>
         <li><a href="tips.html">Studietips</a></li>
@@ -26,9 +32,10 @@
         <li><a href="Contact.html">Contact</a></li>
         <li>
           <button id="NightmodeButtonInsideList" onclick="toggleNightMode()">
-            <img src="img/crescent-moon.ico" ID="NightmodeImage"></a>
+            <img src="img/crescent-moon.ico" class="NightmodeImage"></a>
         </li>
       </div>
+
     </header>
     <main>
       <div id="motivational-quote"></div>
