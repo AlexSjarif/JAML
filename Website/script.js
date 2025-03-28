@@ -65,14 +65,16 @@ function toggleNightMode()
     const button1 = document.getElementById("NightmodeButtonOutsideList");
     const button2 = document.getElementById("NightmodeButtonInsideList");
     const buttons = [button1, button2];
+    const images = document.getElementsByClassName('NightmodeImage');
     if (body.style.color == 'white'){nightMode = true}
 
     if (nightMode == true)
     {
         nightMode = false;
         localStorage.setItem('NightmodeStatus', false);
-        var image = document.querySelector('.NightmodeImage')
-        image.src = 'img/crescent-moon.ico'
+        // var image = document.querySelector('.NightmodeImage')
+        images[0].src = 'img/crescent-moon.ico'
+        images[1].src = 'img/crescent-moon.ico' 
         document.querySelector("header").style.backgroundColor = 'white'
         body.style.background = 'white';
         body.style.color = 'black'
@@ -87,10 +89,11 @@ function toggleNightMode()
     {
         nightMode = true;
         localStorage.setItem('NightmodeStatus', true);
-        var image = document.querySelector('.NightmodeImage')
+        // var image = document.querySelector('.NightmodeImage')
         vars= document.querySelectorAll ('#welcome-message')
 
-        image.src = 'img/sun.ico'
+        images[0].src = 'img/sun.ico'
+        images[1].src = 'img/sun.ico'
         document.querySelector("header").style.backgroundColor = 'rgb(65, 45, 45)'
         body.style.background = 'black'
         body.style.color = 'white'
