@@ -64,34 +64,97 @@ function toggleNightMode()
     const body = document.querySelector("Body");
     const button1 = document.getElementById("NightmodeButtonOutsideList");
     const button2 = document.getElementById("NightmodeButtonInsideList");
-    const buttons = [button1, button2];
     const images = document.getElementsByClassName('NightmodeImage');
+    const listActive = document.querySelector('#List .active');
+    const listItems = document.querySelectorAll('#List li a');
+    const listItemsHover = document.querySelectorAll('#List li a:hover');
+    const listItemsActive = document.querySelectorAll('#List li a .active');  
+
     if (body.style.color == 'white'){nightMode = true}
 
+    // Light Settings
     if (nightMode == true)
-    {
+    {   
+        // Dark Mode Persistence
         nightMode = false;
         localStorage.setItem('NightmodeStatus', false);
+
+        // Button CSS
         images[0].src = 'img/crescent-moon.ico'
         images[1].src = 'img/crescent-moon.ico' 
-        document.querySelector("header").style.backgroundColor = 'white'
-        body.style.background = 'rgb(179, 176, 177)';
-        body.style.color = 'black'
         button1.style.backgroundColor = 'navy'
         button2.style.backgroundColor = 'navy' 
+        
+        // Body CSS
+        body.style.backgroundColor = 'var(--backgroundClrSideBars)';
+        
+        // Header CSS
+        document.querySelector("header").style.backgroundColor = 'white'
+        listItems.forEach(element => {
+            element.style.color = 'black'
+            element.backgroundColor= 'rgba(227, 0, 70, 0.1)';
+        });
+        listItemsHover.forEach(element => {
+            element.style.color = 'var(--hovercolor)';
+            element.backgroundColor= 'rgba(227, 0, 70, 0.1)';
+        });
+        listItemsActive.forEach(element => {
+            element.style.color = 'var(--hovercolor)';
+            element.backgroundColor= 'rgba(227, 0, 70, 0.1)';
+        });
+        listActive.style.color = 'var(--hovercolor)';
+        document.querySelector('.active').style.color= 'var(--hoverColor)';
+        document.querySelector('#menu-toggle').style.color = 'var(--textColor)';
+
+        // Page Content CSS
+        
+            //Home
+        document.querySelector('#welcome-message').style.backgroundColor = 'white';
+
+            // Tips + Ontspanning
+        document.querySelector('.study-tips').style.backgroundColor = 'blue';
     }
-    else if (nightMode == false) 
+
+    // Dark Settings
+    else if (nightMode == false) // All default CSS stuff is basically copy-pasted down here.
     {
+        // Dark Mode Persistence
         nightMode = true;
         localStorage.setItem('NightmodeStatus', true);
+
+        // Button CSS
         images[0].src = 'img/sun.ico'
         images[1].src = 'img/sun.ico'
-        document.querySelector("header").style.backgroundColor = 'rgb(65, 45, 45)'
-        body.style.background = 'black'
-        body.style.color = 'white'
-        document.querySelector('#List li').style.color = 'white'
         button1.style.backgroundColor = 'lightblue'
         button2.style.backgroundColor = 'lightblue'
+        
+        // Body CSS
+        body.style.backgroundColor = 'var(--backgroundClrSideBarsNight)';
+
+        // Header CSS
+        document.querySelector("header").style.backgroundColor = 'rgb(103, 79, 79)'
+
+        listItems.forEach(element => {
+            element.style.color = 'white'
+            element.style.backgroundColor= 'rgba(227, 0, 70, 0.1)';
+        });
+        listItemsHover.forEach(element => {
+            element.style.color = 'var(--hovercolor)';
+            element.style.backgroundColor= 'rgba(227, 0, 70, 0.1)';
+        });
+        listItemsActive.forEach(element => {
+            element.style.color = 'var(--hovercolor)';
+            element.style.backgroundColor= 'rgba(227, 0, 70, 0.1)';
+        });
+        listActive.style.color = 'var(--hovercolor)';
+        document.querySelector('.active').style.color= 'var(--hoverColor)';
+        document.querySelector('#menu-toggle').style.color = 'black';
+
+        // Page Content CSS
+        document.querySelector('#welcome-message').style.backgroundColor = 'darkgrey';
+        
+        document.querySelector(".container").setProperty('background-color', 'red', 'important');
+        document.querySelector(".study-tips").style.backgroundColor = 'blue';
     }
 } 
 
