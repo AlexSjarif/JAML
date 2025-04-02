@@ -2,6 +2,8 @@
     --navBarClr: rgb(95, 95, 224);
     --backgroundClr: white;
     --backgroundClrSideBars: rgb(179, 176, 177);
+    --backgroundClrSideBarsNight:rgb(74, 71, 71);
+    --backgroundOfItems: rgb(218, 218, 218);
     --textColor: black;
     --hoverColor: #e30046;
     --footerColor: #e30046;
@@ -11,6 +13,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+h1, h2{
+    padding-top: 0.5em;
 }
 
 /* Navbar container */
@@ -365,7 +371,7 @@ footer{
 }
 
 .tip-card {
-    background-color: white;
+    background-color: var(--backgroundOfItems);
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -422,9 +428,11 @@ footer{
 .container {
     background-color: var(--backgroundClr);
     grid-column: 2;
-    max-width: 100%; 
+    width: 100%; 
     margin: 2rem auto;
     padding: 0 2rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--hoverColor);
 }
 
 .container h2 {
@@ -436,11 +444,9 @@ footer{
 }
 
 .container article {
-    background-color: white;
+    background-color: var(--backgroundOfItems);
     border-radius: 8px;
     padding: 2rem 1.8rem; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid var(--hoverColor);
     transition: transform 0.3s ease;
 }
 
