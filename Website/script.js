@@ -117,7 +117,6 @@ function toggleNightMode()
         document.querySelector('#welcome-message').style.backgroundColor = 'white';
 
             // Tips + Ontspanning
-        document.querySelector('.study-tips').style.backgroundColor = 'blue';
     }
 
     // Dark Settings
@@ -161,8 +160,6 @@ function toggleNightMode()
 
         // Page Content CSS
         document.querySelector('#welcome-message').style.backgroundColor = 'darkgrey';
-        document.querySelector('.study-tips').style.backgroundColor = 'blue';
-        document.querySelector('.container').setProperty('background-color', 'red', 'important');
     }
 } 
 
