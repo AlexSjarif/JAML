@@ -74,7 +74,13 @@ function toggleNightMode()
 
     // Light Settings
     if (nightMode == true)
-    {   
+    {
+        document.querySelectorAll('.study-tips').forEach(element => {
+            element.style.backgroundColor = 'white';
+        });
+        document.querySelectorAll('.container').forEach(element => {
+            element.style.backgroundColor = 'white';
+        });
         // Dark Mode Persistence
         nightMode = false;
         localStorage.setItem('NightmodeStatus', false);
