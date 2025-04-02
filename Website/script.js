@@ -72,35 +72,26 @@ function toggleNightMode()
     {
         nightMode = false;
         localStorage.setItem('NightmodeStatus', false);
-        // var image = document.querySelector('.NightmodeImage')
         images[0].src = 'img/crescent-moon.ico'
         images[1].src = 'img/crescent-moon.ico' 
         document.querySelector("header").style.backgroundColor = 'white'
-        body.style.background = 'white';
+        body.style.background = 'rgb(179, 176, 177)';
         body.style.color = 'black'
-        // document.getElementById('motivational-quote').style.color = 'black'
-
-        // body.style.background = 'rgb(149, 149, 149)'
-        // body.style.color = 'rgb(11, 11, 64)'
-        // buttons.style.backgroundColor= 'rgb(16,16,92)'
-        // buttons.style.borderColor = 'rgb(38, 195, 219)'
+        button1.style.backgroundColor = 'navy'
+        button2.style.backgroundColor = 'navy' 
     }
     else if (nightMode == false) 
     {
         nightMode = true;
         localStorage.setItem('NightmodeStatus', true);
-        // var image = document.querySelector('.NightmodeImage')
-        vars= document.querySelectorAll ('#welcome-message')
-
         images[0].src = 'img/sun.ico'
         images[1].src = 'img/sun.ico'
         document.querySelector("header").style.backgroundColor = 'rgb(65, 45, 45)'
         body.style.background = 'black'
         body.style.color = 'white'
-        // document.getElementById('motivational-quote').style.color = 'white'
         document.querySelector('#List li').style.color = 'white'
-        // buttons.style.backgroundColor = 'rgb(38, 195, 219)'
-        // buttons.style.borderColor = 'rgb(16,16,92)'
+        button1.style.backgroundColor = 'lightblue'
+        button2.style.backgroundColor = 'lightblue'
     }
 } 
 

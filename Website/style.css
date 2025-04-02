@@ -1,6 +1,7 @@
 :root {
     --navBarClr: rgb(95, 95, 224);
     --backgroundClr: white;
+    --backgroundClrSideBars: rgb(179, 176, 177);
     --textColor: black;
     --hoverColor: #e30046;
     --footerColor: #e30046;
@@ -10,9 +11,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-.content{
-    flex:1;
 }
 
 /* Navbar container */
@@ -37,19 +35,19 @@ header{
     z-index: 1000;
 }
 
-html,body{
-    height: 100%;
+body{
     padding: 0;
     margin: 0;
-    /* display: flex; */
-    flex-direction: column;
+    background-color: var(--backgroundClrSideBars);    
+}
+
+html{
     font-size:1.3rem;
-    background-color: var(--backgroundClr);
 }
 
 main{
-    position: relative;
-    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     padding: 1rem;
 }
 footer{ 
@@ -74,7 +72,7 @@ footer{
 
 /* Navigatie lijst */
 #List {
-    grid-column: 16/30;
+    grid-column: 29;
     display: inline-flex;
     grid-template-columns: repeat(30, 1fr);
     justify-content: end;
@@ -83,10 +81,24 @@ footer{
     font-size: 1.6rem;
     padding: 1rem 1rem 0.5rem 1rem;
 
-    
+
+}
+
+#List li {
+    margin: 0;
 }
 
 #List li a {
+    -webkit-border-top-right-radius: 1px;
+    -moz-border-radius-topright: 1px;
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    -webkit-border-top-left-radius: 1px;
+    -moz-border-radius-topleft: 1px;
+    -webkit-box-shadow: 0px 0px 1px 1px var(--footerColor);
+    -moz-box-shadow: 0px 0px 1px 1px var(--footerColor);
+    box-shadow: 0px 0px 2px 1px var(--footerColor);
+
     text-decoration: none;
     color: var(--textColor);
     padding: 0.5rem 1rem;
@@ -122,12 +134,15 @@ footer{
 #NightmodeButtonInsideList{
     display:inline-block;
     position: inherit;
-    margin-bottom: 10px;
+    margin:  0.5em 0 0.5em 1em;
     height: 40px;
     width: 41px;
-    /* background-color:rgb(16, 16, 92); */
-    border-radius: 25px;
-    /* border-color: aqua; */
+    border-style: none;
+    border-radius: 20px;
+    background-color: navy;
+    -webkit-box-shadow: 0px 0px 1px 1px var(--footerColor);
+    -moz-box-shadow: 0px 0px 1px 1px var(--footerColor);
+    box-shadow: 0px 0px 2px 1px var(--footerColor);
 }
 #NightmodeButtonOutsideList{
     grid-column: 10/span 15;
@@ -137,14 +152,23 @@ footer{
     position: inherit;
     height: 50px;
     width: 50px;
-    /* background-color:rgb(16, 16, 92); */
-    border-radius: 35px;
+    border-style: none;
+    border-radius: 20px;
+    background-color: navy;
+    -webkit-box-shadow: 0px 0px 1px 1px var(--footerColor);
+    -moz-box-shadow: 0px 0px 1px 1px var(--footerColor);
+    box-shadow: 0px 0px 2px 1px var(--footerColor);
+
     /* border-color: aqua; */
+    
 }
 
 .NightmodeImage{
+    margin: auto;
     box-sizing:content-box;
-    /* position: initial; */
+    display: block;
+    align-items: center;
+    justify-content: center;
     top:1em;
     height: 30px;
     width: 30px; 
@@ -157,7 +181,7 @@ footer{
     header img  {
         display: inline-block;
         /* position: absolute; */
-        grid-column: 1/span 8;
+        grid-column: 1;
         /* top :20px;
         left: 20px;  */
         max-width: 300px;
@@ -237,7 +261,7 @@ footer{
         display: none;
     }
     #NightmodeButtonOutsideList{
-        grid-column: 26/27;
+        grid-column: 27 ;
         display:inline-block;
     }
     .NightmodeImage{
@@ -246,11 +270,18 @@ footer{
         width: 30px;
     }
 }
+#quote-wrapper{
+    border-radius: 8px;
+    grid-column: 2;
+    background-color: var(--backgroundClr);
+    margin: 2rem auto;
+    width: 100%;
+}
 #motivational-quote {
+    grid-column: 2;
     font-size: 1.4rem;
     font-style: italic;
     text-align: center;
-    margin: 2rem auto;
     padding: 1.5rem;
     max-width: 800px;
     background-color: rgba(227, 0, 70, 0.1);
@@ -274,6 +305,11 @@ footer{
 }
 /* Welcome message styling */
 #welcome-message {
+    
+    grid-column: 2;
+    background-color: var(--backgroundClr);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--hoverColor);
     max-width: 800px;
     margin: 2rem auto;
     padding: 1.5rem;
@@ -308,6 +344,11 @@ footer{
 
   /* Study Tips Styling */
 .study-tips {
+    grid-column: 2;
+    background-color: var(--backgroundClr);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--hoverColor);
     max-width: 900px;
     margin: 2rem auto;
     padding: 0 1.5rem;
@@ -376,7 +417,9 @@ footer{
 
 /* Contact Page Styling */
 .container {
-    max-width: 720px; 
+    background-color: var(--backgroundClr);
+    grid-column: 2;
+    max-width: 100%; 
     margin: 2rem auto;
     padding: 0 2rem; 
 }
