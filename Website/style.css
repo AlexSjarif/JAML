@@ -271,7 +271,7 @@ footer{
     }
 }
 #quote-wrapper{
-    border-radius: 8px;
+    border-radius: 25px;
     grid-column: 2;
     background-color: var(--backgroundClr);
     margin: 2rem auto;
@@ -283,10 +283,11 @@ footer{
     font-style: italic;
     text-align: center;
     padding: 1.5rem;
-    max-width: 800px;
+    
     background-color: rgba(227, 0, 70, 0.1);
     border-left: 4px solid var(--hoverColor);
     color: var(--textColor);
+    border-radius: 25px;
 }
 
 
@@ -314,6 +315,7 @@ footer{
     margin: 2rem auto;
     padding: 1.5rem;
     line-height: 1.6;
+    border-radius: 25px;
   }
   
   #welcome-message h1 {
@@ -359,6 +361,7 @@ footer{
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2.2rem;
+    padding : 1rem;
 }
 
 .tip-card {
