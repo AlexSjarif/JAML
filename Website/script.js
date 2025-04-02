@@ -117,10 +117,15 @@ function toggleNightMode()
     // Dark Settings
     else if (nightMode == false) // All default CSS stuff is basically copy-pasted down here.
     {
+        document.querySelectorAll('.study-tips').forEach(element => {
+            element.style.backgroundColor = 'darkgrey';
+        });
+        document.querySelectorAll('.container').forEach(element => {
+            element.style.backgroundColor = 'darkgrey';
+        });
         // Dark Mode Persistence
         nightMode = true;
         localStorage.setItem('NightmodeStatus', true);
-
         // Button CSS
         images[0].src = 'img/sun.ico'
         images[1].src = 'img/sun.ico'
