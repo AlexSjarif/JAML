@@ -95,14 +95,7 @@ footer{
 }
 
 #List li a {
-    -webkit-border-top-right-radius: 1px;
-    -moz-border-radius-topright: 1px;
-    border-top-right-radius: 1px;
-    border-top-left-radius: 1px;
-    -webkit-border-top-left-radius: 1px;
-    -moz-border-radius-topleft: 1px;
-    -webkit-box-shadow: 0px 0px 1px 1px var(--footerColor);
-    -moz-box-shadow: 0px 0px 1px 1px var(--footerColor);
+
     box-shadow: 0px 0px 2px 1px var(--footerColor);
 
     text-decoration: none;
@@ -316,7 +309,7 @@ footer{
     background-color: var(--backgroundClr);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-left: 4px solid var(--hoverColor);
-    max-width: 800px;
+    width: 100%;
     margin: 2rem auto;
     padding: 1.5rem;
     line-height: 1.6;
