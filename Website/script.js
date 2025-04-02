@@ -90,21 +90,20 @@ function toggleNightMode()
         
         // Header CSS
         document.querySelector("header").style.backgroundColor = 'white'
+        listActive.style.color = 'var(--hovercolor)';
         listItems.forEach(element => {
             element.style.color = 'black'
-            element.backgroundColor= 'rgba(227, 0, 70, 0.1)';
         });
         listItemsHover.forEach(element => {
             element.style.color = 'var(--hovercolor)';
-            element.backgroundColor= 'rgba(227, 0, 70, 0.1)';
+            element.style.backgroundColor= 'white';
         });
         listItemsActive.forEach(element => {
             element.style.color = 'var(--hovercolor)';
             element.backgroundColor= 'rgba(227, 0, 70, 0.1)';
         });
-        listActive.style.color = 'var(--hovercolor)';
         document.querySelector('.active').style.color= 'var(--hoverColor)';
-        document.querySelector('#menu-toggle').style.color = 'var(--textColor)';
+        
 
         // Page Content CSS
         
@@ -134,9 +133,9 @@ function toggleNightMode()
         // Header CSS
         document.querySelector("header").style.backgroundColor = 'rgb(103, 79, 79)'
 
+        listActive.style.color = 'var(--hovercolor)';
         listItems.forEach(element => {
             element.style.color = 'white'
-            element.style.backgroundColor= 'rgba(227, 0, 70, 0.1)';
         });
         listItemsHover.forEach(element => {
             element.style.color = 'var(--hovercolor)';
@@ -146,15 +145,13 @@ function toggleNightMode()
             element.style.color = 'var(--hovercolor)';
             element.style.backgroundColor= 'rgba(227, 0, 70, 0.1)';
         });
-        listActive.style.color = 'var(--hovercolor)';
         document.querySelector('.active').style.color= 'var(--hoverColor)';
         document.querySelector('#menu-toggle').style.color = 'black';
 
         // Page Content CSS
         document.querySelector('#welcome-message').style.backgroundColor = 'darkgrey';
-        
-        document.querySelector(".container").setProperty('background-color', 'red', 'important');
-        document.querySelector(".study-tips").style.backgroundColor = 'blue';
+        document.querySelector('.study-tips').style.backgroundColor = 'blue';
+        document.querySelector('.container').setProperty('background-color', 'red', 'important');
     }
 } 
 

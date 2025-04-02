@@ -510,6 +510,9 @@ footer{
     .container label {
         margin-bottom: 0.7rem; 
     }
+    #List.active{
+        grid-column: 2/30;
+    }
 }
 
 @media(max-width: 480px) {
