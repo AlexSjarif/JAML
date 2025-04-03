@@ -163,6 +163,10 @@ function toggleNightMode()
     }
 } 
 
+function formConfirmation(){
+    alert("Formulier is verzonden!")
+} 
+
 // Initialize all functionality when page loads
 document.addEventListener('DOMContentLoaded', function() {
     actiefTab();
