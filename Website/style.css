@@ -6,7 +6,7 @@
     --backgroundOfItems: rgb(218, 218, 218);
     --textColor: black;
     --hoverColor: #e30046;
-    --footerColor: #e30046;
+    --footerColor: #e300484f;
 }
 
 * {
@@ -61,7 +61,7 @@ footer{
     flex-direction: column;
     padding: 1rem;
     align-items: center;
-    background-color: #e30048;
+    background-color: var(--footerColor);
     box-shadow: 0 4px 4px -2px #645f60;
 }
 
@@ -272,12 +272,10 @@ footer{
     width: 95%;
 }
 #motivational-quote {
-    grid-column: 2;
     font-size: 1.4rem;
     font-style: italic;
     text-align: center;
     padding: 1.5rem;
-    
     background-color: rgba(227, 0, 70, 0.1);
     border-left: 4px solid var(--hoverColor);
     color: var(--textColor);
