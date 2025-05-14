@@ -79,6 +79,7 @@ footer{
 /* Navigatie lijst */
 #List {
     grid-column: 29;
+    width: 40rem;
     display: inline-flex;
     grid-template-columns: repeat(30, 1fr);
     justify-content: end;
