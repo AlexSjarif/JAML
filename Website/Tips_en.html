@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="logo" href="img/Icon.png" />
+    <title>StudentBuddy</title>
+  </head>
+  <body>
+    <header>
+      <div id="menu-logo">
+        <img src="img/Logo-Light.png" alt="" id="logo" />
+        <button id="NightmodeButtonOutsideList" onclick="toggleNightMode()">
+          <img src="img/crescent-moon.ico" class="NightmodeImage" />
+        </button>
+        <div id="menu" onclick="toggleMenu()">
+          <a href="javascript:void(0);" id="menu-toggle">☰</a>
+        </div>
+      </div>
+      <div id="List">
+        <li><a href="Home_en.html">Home</a></li>
+        <li><a href="Tips_en.html">Study Tips</a></li>
+        <li><a href="Relaxation_en.html">Relaxation</a></li>
+        <li><a href="Contact_en.html">Contact</a></li>
+        <li><a href="tips.html">NL</a></li>
+        <li>
+          <button id="NightmodeButtonInsideList" onclick="toggleNightMode()">
+            <img src="img/crescent-moon.ico" class="NightmodeImage" />
+          </button>
+        </li>
+      </div>
+    </header>
+
+    <main>
+      <section class="study-tips">
+        <h1>Effective Study Tips</h1>
+
+        <div class="tip-card">
+          <h2>1. The Pomodoro Technique</h2>
+          <p>
+            Work in 25-minute blocks with 5-minute breaks. After 4 blocks, take
+            a longer break of 15–30 minutes. This improves your focus and helps
+            prevent procrastination.
+          </p>
+
+          <div class="tip-icon">⏱️</div>
+        </div>
+
+        <div class="tip-card">
+          <h2>2. Active Summarizing</h2>
+          <p>
+            Write short summaries in your own words. Use mind maps or cheat
+            sheets to spot connections. This helps with memory retention.
+          </p>
+
+          <div class="tip-icon">📝</div>
+        </div>
+
+        <div class="tip-card">
+          <h2>3. Spaced Repetition</h2>
+          <p>
+            Review the material at intervals (day 1, day 3, day 7, etc.). Use
+            apps like Anki or Quizlet for flashcards. Your brain retains more
+            through repetition.
+          </p>
+
+          <div class="tip-icon">🔄</div>
+        </div>
+
+        <div class="tip-card">
+          <h2>4. Teach a Fake Audience</h2>
+          <p>
+            Explain the material out loud as if you're teaching someone else.
+            This helps reveal gaps in your knowledge and strengthens
+            understanding.
+          </p>
+
+          <div class="tip-icon">🗣️</div>
+        </div>
+
+        <div class="tip-card">
+          <h2>5. Healthy Study Routine</h2>
+          <p>
+            Get enough sleep (7–9 hours), exercise regularly, and eat healthy. A
+            well-rested brain performs much better!
+          </p>
+
+          <div class="tip-icon">💤</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>©StudentBuddy 2025 - MADE BY JAML</p>
+    </footer>
+  </body>
+</html>

@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <link rel="icon" 
-     type="logo" 
-     href="img/Icon.png">
+    <link rel="icon" type="logo" href="img/Icon.png" />
     <title>StudentBuddy</title>
   </head>
   <body>
@@ -15,89 +13,90 @@
       <div id="menu-logo">
         <img src="img/Logo-Light.png" alt="" id="logo" />
         <button id="NightmodeButtonOutsideList" onclick="toggleNightMode()">
-          <img src="img/crescent-moon.ico" class="NightmodeImage"></a>
+          <img src="img/crescent-moon.ico" class="NightmodeImage" />
         </button>
         <div id="menu" onclick="toggleMenu()">
           <a href="javascript:void(0);" id="menu-toggle">☰</a>
         </div>
       </div>
       <div id="List">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="tips.html">Studietips</a></li>
-        <li><a href="ontspanning.html">Ontspanning</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-        <li><a href="Contact_en.html">EN</a></li>
+        <li><a href="Home_en.html">Home</a></li>
+        <li><a href="Tips_en.html">Study Tips</a></li>
+        <li><a href="Relaxation_en.html">Relaxation</a></li>
+        <li><a href="Contact_en.html">Contact</a></li>
+        <li><a href="Contact.html">NL</a></li>
         <li>
           <button id="NightmodeButtonInsideList" onclick="toggleNightMode()">
-            <img src="img/crescent-moon.ico" class="NightmodeImage"></a>
+            <img src="img/crescent-moon.ico" class="NightmodeImage" />
+          </button>
         </li>
       </div>
     </header>
 
     <main>
       <section class="container">
-        <h2>Neem contact met ons op</h2>
+        <h2>Contact Us</h2>
         <article>
           <form onsubmit="formConfirmation()">
-            <label for="voornaam"
-              >Voornaam <span style="color: red">*</span></label
-            >
+            <label for="voornaam">
+              First Name <span style="color: red">*</span>
+            </label>
             <input
               type="text"
               id="voornaam"
               name="voornaam"
-              placeholder="Voornaam"
+              placeholder="First Name"
               required
             />
 
-            <label for="achternaam"
-              >Achternaam <span style="color: red">*</span></label
-            >
+            <label for="achternaam">
+              Last Name <span style="color: red">*</span>
+            </label>
             <input
               type="text"
               id="achternaam"
               name="achternaam"
-              placeholder="Achternaam"
+              placeholder="Last Name"
               required
             />
 
-            <label for="email"
-              >E-mailadres <span style="color: red">*</span></label
-            >
+            <label for="email">
+              Email Address <span style="color: red">*</span>
+            </label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="E-mailadres"
+              placeholder="Email Address"
               required
             />
 
-            <label for="telefoon">Telefoonnummer</label>
+            <label for="telefoon">Phone Number</label>
             <input
               type="tel"
               id="telefoon"
               name="telefoon"
-              placeholder="Telefoonnummer"
+              placeholder="Phone Number"
             />
 
-            <label for="bericht"
-              >Uw vraag of bericht <span style="color: red">*</span></label
-            >
+            <label for="bericht">
+              Your Question or Message <span style="color: red">*</span>
+            </label>
             <textarea
               id="bericht"
               name="bericht"
-              placeholder="Schrijf hier uw vraag of bericht."
+              placeholder="Write your question or message here."
               required
             ></textarea>
 
-            <input type="submit" value="Versturen" />
-            <p><span style="color: red">*</span> dit zijn verplichte velden.</p>
+            <input type="submit" value="Submit" />
+            <p><span style="color: red">*</span> these fields are required.</p>
           </form>
         </article>
       </section>
     </main>
     <footer>
       <p>©StudentBuddy 2025 - MADE BY JAML</p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

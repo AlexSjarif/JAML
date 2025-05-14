@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="logo" href="img/Icon.png" />
+    <title>StudentBuddy</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="menu-logo">
+        <!--Child 1-->
+        <div id="logo"><img src="img/Logo-Light.png" alt="" /></div>
+        <!--Child 2-->
+        <button id="NightmodeButtonOutsideList" onclick="toggleNightMode()">
+          <img src="img/crescent-moon.ico" class="NightmodeImage" />
+        </button>
+        <!--Child 3-->
+        <div id="menu" onclick="toggleMenu()">
+          <a href="javascript:void(0);" id="menu-toggle">☰</a>
+        </div>
+      </div>
+
+      <div id="List">
+        <li><a href="Home_en.html">Home</a></li>
+        <li><a href="Tips_en.html">Study Tips</a></li>
+        <li><a href="Relaxation_en.html">Relaxation</a></li>
+        <li><a href="Contact_en.html">Contact</a></li>
+        <li><a href="index.html">NL</a></li>
+        <li>
+          <button id="NightmodeButtonInsideList" onclick="toggleNightMode()">
+            <img src="img/crescent-moon.ico" class="NightmodeImage" />
+          </button>
+        </li>
+      </div>
+    </header>
+    <main>
+      <section id="quote-wrapper">
+        <div id="motivational-quote"></div>
+      </section>
+
+      <section id="welcome-message">
+        <h1>Welcome to StudentBuddy!</h1>
+        <p>
+          This website is your personal study coach, designed to help you learn
+          smarter, plan more effectively, and still make time for relaxation.
+          Whether you're stuck on a tough topic or just need a quick break, we
+          offer:
+        </p>
+        <ul>
+          <li>
+            🧠 <strong>Study Tips</strong> – Proven methods to learn faster and
+            better
+          </li>
+          <li>
+            ⏳ <strong>Planning Tools</strong> – Smart tools to manage your time
+          </li>
+          <li>
+            🎮 <strong>Relaxation Ideas</strong> – Quick breaks to recharge your
+            brain
+          </li>
+        </ul>
+        <p>
+          Start exploring through the menu at the top, and remember: every great
+          achievement starts with a small step!
+          <span id="dynamic-encouragement">Today is your day!</span>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>©StudentBuddy 2025 - MADE BY JAML</p>
+    </footer>
+  </body>
+</html>
