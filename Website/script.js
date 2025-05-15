@@ -141,7 +141,7 @@ function toggleNightMode()
         body.style.backgroundColor = 'var(--backgroundClrSideBarsNight)';
 
         // Header CSS
-        document.querySelector("header").style.backgroundColor = 'rgb(103, 79, 79)'
+        document.querySelector("header").style.backgroundColor = 'rgb(81, 79, 103)'
 
         listActive.style.color = 'var(--hovercolor)';
         listItems.forEach(element => {

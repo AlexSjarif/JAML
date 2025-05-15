@@ -1,8 +1,8 @@
 :root {
     --navBarClr: rgb(95, 95, 224);
     --backgroundClr: white;
-    --backgroundClrSideBars: rgb(179, 176, 177);
-    --backgroundClrSideBarsNight:rgb(74, 71, 71);
+    --backgroundClrSideBars: rgb(103, 166, 198);
+    --backgroundClrSideBarsNight:rgb(36, 57, 99);
     --backgroundOfItems: rgb(218, 218, 218);
     --textColor: black;
     --hoverColor: #e30046;
