@@ -16,7 +16,7 @@ function toggleMenu() {
 }
 
 // Array of motivational quotes
-const quotes = [
+const quotesNL = [
     "Discipline is de brug tussen doelen en prestatie.",
     "Elke expert was ooit een beginner.",
     "Succes is de optelsom van kleine inspanningen, elke dag herhaald.",
@@ -30,7 +30,7 @@ const quotes = [
 ];
 
 // Array of encouragement phrases
-const encouragements = [
+const encouragementsNL = [
     "Vandaag is jouw dag!",
     "Jij kunt dit!",
     "Elke stap telt!",
@@ -40,19 +40,19 @@ const encouragements = [
 
 // Display random motivational quote
 function displayRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomIndex = Math.floor(Math.random() * quotesNL.length);
     const quoteElement = document.getElementById('motivational-quote');
     if (quoteElement) {
-        quoteElement.textContent = quotes[randomIndex];
+        quoteElement.textContent = quotesNL[randomIndex];
     }
 }
 
 // Display random encouragement phrase
 function displayEncouragement() {
-    const randomIndex = Math.floor(Math.random() * encouragements.length);
+    const randomIndex = Math.floor(Math.random() * encouragementsNL.length);
     const encouragementElement = document.getElementById('dynamic-encouragement');
     if (encouragementElement) {
-        encouragementElement.textContent = encouragements[randomIndex];
+        encouragementElement.textContent = encouragementsNL[randomIndex];
     }
 }
 
