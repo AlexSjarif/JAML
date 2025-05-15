@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" type="logo" href="img/Icon.png" />
+    <title>StudentBuddy - Calendar</title>
+  </head>
+  <body>
+    <header>
+      <div id="menu-logo">
+        <img src="img/Logo-Light.png" alt="" id="logo" />
+        <button id="NightmodeButtonOutsideList" onclick="toggleNightMode()">
+          <img src="img/crescent-moon.ico" class="NightmodeImage" />
+        </button>
+        <div id="menu" onclick="toggleMenu()">
+          <a href="javascript:void(0);" id="menu-toggle">☰</a>
+        </div>
+      </div>
+      <div id="List">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tips.html">Studietips</a></li>
+        <li><a href="ontspanning.html">Ontspanning</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Home_en.html">EN</a></li>
+        <li>
+          <button id="NightmodeButtonInsideList" onclick="toggleNightMode()">
+            <img src="img/crescent-moon.ico" class="NightmodeImage" />
+          </button>
+        </li>
+      </div>
+    </header>
+
+    <main>
+  <section id="calendar-app">
+    <h2>Weekagenda</h2>
+    <div id="calendar-controls">
+      <button id="prevWeek">Vorige week</button>
+      <span id="weekLabel"></span>
+      <button id="nextWeek">Volgende week</button>
+      <button id="addEventBtn">+ Afspraak toevoegen</button>
+    </div>
+    <div class="week-calendar">
+      <div class="calendar-times">
+        <!-- Tijdsloten worden via JS gevuld -->
+      </div>
+      <div class="calendar-grid" id="calendarGrid">
+        <!-- Kalender wordt via JS gevuld -->
+      </div>
+    </div>
+    <!-- Modal voor afspraak toevoegen -->
+    <div id="eventModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h3>Nieuwe afspraak</h3>
+        <form id="eventForm">
+          <label>Titel:<input type="text" id="eventTitle" required></label>
+          <label>Kleur:
+            <input type="color" id="eventColor" value="#2196f3">
+          </label>
+          <label>Dag:
+            <select id="eventDay">
+              <option value="0">Maandag</option>
+              <option value="1">Dinsdag</option>
+              <option value="2">Woensdag</option>
+              <option value="3">Donderdag</option>
+              <option value="4">Vrijdag</option>
+              <option value="5">Zaterdag</option>
+              <option value="6">Zondag</option>
+            </select>
+          </label>
+          <label>Starttijd:
+            <input type="time" id="eventStart" min="00:00" max="23:59" required>
+          </label>
+          <label>Eindtijd:
+            <input type="time" id="eventEnd" min="00:00" max="23:59" required>
+          </label>
+          <button type="submit">Toevoegen</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+    <footer>
+      <p>©StudentBuddy 2025 - MADE BY JAML</p>
+    </footer>
+  </body>
+</html>

@@ -174,3 +174,141 @@ document.addEventListener('DOMContentLoaded', function() {
     displayEncouragement();
     if (localStorage.getItem('NightmodeStatus') === 'true') toggleNightMode();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --- WEEKAGENDA MET EUROPESE TIJDEN, KLEUREN EN VERWIJDEREN ---
+
+const times = [];
+for (let h = 0; h < 24; h++) {
+  times.push((h < 10 ? "0" : "") + h + ":00");
+}
+const days = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
+let currentWeekStart = getMonday(new Date());
+let events = JSON.parse(localStorage.getItem("calendarEvents") || "[]");
+
+function getMonday(d) {
+  d = new Date(d);
+  let day = d.getDay(), diff = d.getDate() - day + (day === 0 ? -6 : 1);
+  d.setDate(diff);
+  d.setHours(0,0,0,0);
+  return d;
+}
+
+function renderWeek() {
+  const timesCol = document.querySelector('.calendar-times');
+  if (timesCol) {
+    timesCol.innerHTML = "<div></div>";
+    times.forEach(t => timesCol.innerHTML += `<div>${t}</div>`);
+  }
+  const grid = document.getElementById('calendarGrid');
+  if (!grid) return;
+  grid.innerHTML = "";
+  for (let d = 0; d < 7; d++) {
+    const dayCol = document.createElement('div');
+    dayCol.className = "calendar-day-col";
+    dayCol.style.position = "relative";
+    for (let t = 0; t < times.length; t++) {
+      const slot = document.createElement('div');
+      slot.className = "calendar-slot";
+      slot.dataset.day = d;
+      slot.dataset.time = times[t];
+      dayCol.appendChild(slot);
+    }
+    // Events
+    const dayDate = new Date(currentWeekStart);
+    dayDate.setDate(dayDate.getDate() + d);
+    const dayEvents = events
+      .map((ev, idx) => ({...ev, idx}))
+      .filter(ev => {
+        const evDate = new Date(ev.date);
+        return evDate.toDateString() === dayDate.toDateString();
+      });
+    dayEvents.forEach(ev => {
+      const startIdx = getTimeIndex(ev.start);
+      const endIdx = getTimeIndex(ev.end);
+      if (startIdx === -1 || endIdx === -1 || endIdx <= startIdx) return;
+      const block = document.createElement('div');
+      block.className = "event-block";
+      block.style.top = (startIdx * 40) + "px";
+      block.style.height = ((endIdx - startIdx) * 40) + "px";
+      block.style.background = ev.color;
+      block.innerText = ev.title + ` (${ev.start} - ${ev.end})`;
+      block.title = ev.title + " " + ev.start + " - " + ev.end;
+      block.onclick = function(e) {
+        e.stopPropagation();
+        if (confirm(`Verwijder "${ev.title}"?`)) {
+          events.splice(ev.idx, 1);
+          localStorage.setItem("calendarEvents", JSON.stringify(events));
+          renderWeek();
+        }
+      };
+      dayCol.appendChild(block);
+    });
+    grid.appendChild(dayCol);
+  }
+  const weekLabel = document.getElementById('weekLabel');
+  const monday = new Date(currentWeekStart);
+  const sunday = new Date(currentWeekStart); sunday.setDate(monday.getDate() + 6);
+  weekLabel.textContent = `${monday.toLocaleDateString('nl-NL')} - ${sunday.toLocaleDateString('nl-NL')}`;
+}
+
+function getTimeIndex(timeStr) {
+  const [h, m] = timeStr.split(":").map(Number);
+  return h + (m >= 30 ? 1 : 0);
+}
+
+document.getElementById('prevWeek').onclick = () => {
+  currentWeekStart.setDate(currentWeekStart.getDate() - 7);
+  renderWeek();
+};
+document.getElementById('nextWeek').onclick = () => {
+  currentWeekStart.setDate(currentWeekStart.getDate() + 7);
+  renderWeek();
+};
+
+const modal = document.getElementById('eventModal');
+document.getElementById('addEventBtn').onclick = () => { modal.style.display = "flex"; };
+document.getElementById('closeModal').onclick = () => { modal.style.display = "none"; };
+window.onclick = function(e) { if (e.target === modal) modal.style.display = "none"; };
+
+document.getElementById('eventForm').onsubmit = function(e) {
+  e.preventDefault();
+  const title = document.getElementById('eventTitle').value;
+  const color = document.getElementById('eventColor').value;
+  const dayIdx = parseInt(document.getElementById('eventDay').value);
+  const start = document.getElementById('eventStart').value;
+  const end = document.getElementById('eventEnd').value;
+  if (start >= end) return alert("Eindtijd moet na starttijd zijn!");
+  const date = new Date(currentWeekStart);
+  date.setDate(date.getDate() + dayIdx);
+  events.push({ title, color, start, end, date: date.toISOString() });
+  localStorage.setItem("calendarEvents", JSON.stringify(events));
+  modal.style.display = "none";
+  renderWeek();
+  this.reset();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.getElementById('calendarGrid')) renderWeek();
+});

@@ -523,3 +523,250 @@ footer{
         padding: 8px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Kalender Google Agenda stijl */
+#calendar-app {
+  width: 100vw;
+  min-height: 90vh;
+  background: var(--backgroundClr, #fff);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+#calendar-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 2rem 0.5rem 2rem;
+}
+
+#calendar-controls button {
+  background: var(--hoverColor);
+  color: #fff;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+#calendar-controls button:hover {
+  background: rgb(164, 60, 60);
+}
+
+.week-calendar {
+  display: flex;
+  width: 100%;
+  max-height: 70vh; /* Zorg dat de footer zichtbaar blijft */
+  overflow-y: auto; /* Scrollen als het raster te groot is */
+  background: var(--backgroundClr, #fff);
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.calendar-times {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  background: #f5f5f5;
+  border-right: 1px solid #ddd;
+  font-size: 0.9em;
+  padding-top: 40px;
+  flex-shrink: 0;
+}
+.calendar-times div {
+  height: 40px;
+  text-align: right;
+  padding-right: 5px;
+  color: #888;
+  box-sizing: border-box;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  flex: 1;
+  border-left: 1px solid #ddd;
+  position: relative;
+  min-width: 0;
+  background: #fff;
+}
+
+.calendar-day-col {
+  border-right: 1px solid #eee;
+  position: relative;
+  min-width: 0;
+}
+
+.calendar-slot {
+  height: 40px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  background: #fafbfc;
+  min-width: 0;
+}
+
+.event-block {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  border-radius: 6px;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 0.95em;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.95;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#addEventBtn {
+  margin-left: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  min-width: 300px;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+}
+
+.close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#eventForm label {
+  display: block;
+  margin-bottom: 1em;
+  color: #333;
+}
+#eventForm input[type="text"],
+#eventForm input[type="time"],
+#eventForm select {
+  width: 100%;
+  padding: 0.3em;
+  margin-top: 0.2em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+#eventForm input[type="color"] {
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+#eventForm button[type="submit"] {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+#eventForm button[type="submit"]:hover {
+  background: #1769aa;
+}
+
+@media (max-width: 900px) {
+  .week-calendar { flex-direction: column; height: auto; max-height: none; }
+  .calendar-times { flex-direction: row; width: 100%; height: 40px; padding-top: 0;}
+  .calendar-times div { height: 100%; width: 40px; text-align: center; }
+  .calendar-grid { grid-template-columns: 1fr; }
+}
