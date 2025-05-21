@@ -265,6 +265,7 @@ footer{
         height: 30px;
         width: 30px;
     }
+    
 }
 #quote-wrapper{
     border-radius: 8px;
@@ -502,7 +503,49 @@ footer{
     box-shadow: 0 4px 8px rgba(227, 0, 70, 0.2);
 }
 
+#loginForm {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 100;
+}
 
+#loginForm input {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 200px;
+}
+
+#loginForm button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.LoginImage {
+  width: 30px;
+}
+#loginButton{
+    margin-left: 16px;
+    height: 34px;
+}
+
+@media (max-width: 1250px){
+    #loginButton{
+    width: 0px;
+    border:0px;
+    margin-left: 0px;
+    height: 0px;}
+}
 
 @media (max-width: 768px) {
     .container {
@@ -520,6 +563,11 @@ footer{
     #List.active{
         grid-column: 2/30;
     }
+    #loginButton{
+        width: 0px;
+        border:0px;
+        margin-left: 0px;
+        height: 0px;}
 }
 
 @media(max-width: 480px) {

@@ -214,6 +214,14 @@ document.addEventListener('DOMContentLoaded', function() {
     displayEncouragementEN();
 
     if (localStorage.getItem('NightmodeStatus') === 'true') toggleNightMode();
+
+    if (sessionStorage.getItem('loggedIn') === 'true') {
+        const loginIcon = document.getElementById("loginButton").querySelector("img");
+        if (loginIcon) {
+            loginIcon.src = "img/profile-icon.png";
+            loginIcon.alt = "Profile";
+        }
+     }
 });
 
 
@@ -354,3 +362,19 @@ document.getElementById('eventForm').onsubmit = function(e) {
 document.addEventListener('DOMContentLoaded', function() {
   if (document.getElementById('calendarGrid')) renderWeek();
 });
+
+function showLoginForm() {
+  document.getElementById("loginForm").style.display = "block";
+}
+
+function fakeLogin() {
+  // Verberg formulier
+  document.getElementById("loginForm").style.display = "none";
+
+  sessionStorage.setItem('loggedIn', 'true');
+
+  // Vervang login icoon door profielicoon
+  const loginBtn = document.getElementById("loginButton").querySelector("img");
+  loginBtn.src = "img/profile-icon.png"; // Zorg dat dit plaatje bestaat
+  loginBtn.alt = "Profile";
+}

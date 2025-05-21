@@ -40,6 +40,12 @@
             <button id="NightmodeButtonInsideList" onclick="toggleNightMode()">
               <img src="img/crescent-moon.ico" class="NightmodeImage"></a>
           </li>
+          <li>
+            <button id="loginButton" onclick="showLoginForm()">
+              <img src="img/login-icon.png" class="LoginImage" alt="Login" />
+            </button>
+          </li>
+
         </div>
         
       </div>
@@ -72,5 +78,10 @@
     <footer>
         <p>©StudentBuddy 2025 - MADE BY JAML</p>
     </footer>
+    <div id="loginForm" style="display: none;">
+      <input type="text" placeholder="Gebruiker" />
+      <input type="password" placeholder="Wachtwoord" />
+      <button onclick="fakeLogin()">Login</button>
+    </div>
   </body>
 </html>
