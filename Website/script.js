@@ -217,10 +217,11 @@ function getMonday(d) {
 
 function renderWeek() {
   const timesCol = document.querySelector('.calendar-times');
-  if (timesCol) {
-    timesCol.innerHTML = "<div></div>";
-    times.forEach(t => timesCol.innerHTML += `<div>${t}</div>`);
-  }
+  timesCol.innerHTML = "";
+  times.forEach(t => {
+  timesCol.innerHTML += `<div>${t}</div>`;
+  });
+
   const grid = document.getElementById('calendarGrid');
   if (!grid) return;
   grid.innerHTML = "";
