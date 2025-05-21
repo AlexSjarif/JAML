@@ -283,6 +283,16 @@ footer{
     color: var(--textColor);
     border-radius: 8px;
 }
+#motivational-quote-en {
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(227, 0, 70, 0.1);
+    border-left: 4px solid var(--hoverColor);
+    color: var(--textColor);
+    border-radius: 8px;
+}
 
 
 @media (max-width: 768px) {
@@ -293,6 +303,10 @@ footer{
     }
 
 #motivational-quote {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+#motivational-quote-en {
         font-size: 1.2rem;
         padding: 1rem;
     }
@@ -327,6 +341,10 @@ footer{
   }
   
   #dynamic-encouragement {
+    font-weight: bold;
+    color: var(--hoverColor);
+  }
+  #dynamic-encouragement-en {
     font-weight: bold;
     color: var(--hoverColor);
   }

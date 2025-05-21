@@ -29,6 +29,20 @@ const quotesNL = [
     "De enige plek waar succes vóór werk komt, is in het woordenboek."
 ];
 
+const quotesEN = [
+    "Discipline is the bridge between goals and achievement.",
+    "Every expert was once a beginner.",
+    "Success is the sum of small efforts repeated day in and day out.",
+    "Don’t watch the clock; do what it does—keep going.",
+    "The pain of studying is temporary, but the pride of success lasts forever.",
+    "You don’t have to be perfect, just better than you were yesterday.",
+    "The more you learn, the more you earn.",
+    "Dream big, work hard, stay focused, and never give up.",
+    "Knowledge is power, but action is the key.",
+    "The only place where success comes before work is in the dictionary."
+
+]
+
 // Array of encouragement phrases
 const encouragementsNL = [
     "Vandaag is jouw dag!",
@@ -38,12 +52,29 @@ const encouragementsNL = [
     "Succes begint hier!"
 ];
 
+const encouragementsEN = [
+    "Today is your day!",
+    "You can do this!",
+    "Every step counts!",
+    "Keep going!",
+    "Success starts here!"
+];
+
+
 // Display random motivational quote
 function displayRandomQuote() {
     const randomIndex = Math.floor(Math.random() * quotesNL.length);
     const quoteElement = document.getElementById('motivational-quote');
     if (quoteElement) {
         quoteElement.textContent = quotesNL[randomIndex];
+    }
+}
+
+function displayRandomQuoteEN() {
+    const randomIndex = Math.floor(Math.random() * quotesEN.length);
+    const quoteElement = document.getElementById('motivational-quote-en');
+    if (quoteElement) {
+        quoteElement.textContent = quotesEN[randomIndex];
     }
 }
 
@@ -56,6 +87,13 @@ function displayEncouragement() {
     }
 }
 
+function displayEncouragementEN() {
+    const randomIndex = Math.floor(Math.random() * encouragementsEN.length);
+    const encouragementElement = document.getElementById('dynamic-encouragement-en');
+    if (encouragementElement) {
+        encouragementElement.textContent = encouragementsEN[randomIndex];
+    }
+}
 // Toggle dark mode
 
 let nightMode = false; // Default to light mode
@@ -171,7 +209,10 @@ function formConfirmation(){
 document.addEventListener('DOMContentLoaded', function() {
     actiefTab();
     displayRandomQuote();
+    displayRandomQuoteEN();
     displayEncouragement();
+    displayEncouragementEN();
+
     if (localStorage.getItem('NightmodeStatus') === 'true') toggleNightMode();
 });
 
